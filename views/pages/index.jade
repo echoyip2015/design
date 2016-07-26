@@ -1,0 +1,38 @@
+extend ../layout
+
+block content
+	.container.category
+		.row
+			.col-md-12				
+				each item in category
+					.col-md-4
+						.class-info
+							.class_img
+								img(src="#{item.poster}",alt="#{item.title}")
+							dl.class_para
+									dt #{item.title}
+									dd
+										each sitem in item.small
+											span: a(href="#") #{sitem._name}
+								
+	.winnow
+		.container
+			h2 #{famous.title}
+			.row
+				each item in famous._list			
+					.col-md-3
+						.thumbnail
+							a(href="#")
+								img(src="#{item.poster}",alt="#{item.title}")
+							.caption
+								h3 #{item._name}
+								p.c_descript
+									span.mb_v 模型版本
+										strong #{item._vb}
+									span.downloadtime 下载次数
+										strong #{item._times}
+									span.sc_size 素材大小
+										strong #{item._size}		
+								p
+									a.btn.btn_chosen(href="#",role="button")下载  
+									a.btn.btn_tocart.right(href="#",role="button")加入收藏					

@@ -1,0 +1,25 @@
+extend ../layout
+
+block content
+	.container
+		.row
+			each item in movies
+				.col-md-7
+					embed(src="#{movie.flash}",allowFullscreen="true",quality="high",width="720",height="600",align="middle",type="application/x-shockwave-flash")
+				.col-md-5
+					dl.dl-horizontal
+						dt 名字
+						dd= movie.title
+						dt 名字2
+						dd= movie.doctor
+						dt 上映时间
+						dd= movie.year
+						dt 名字4
+						dd= movie.title
+						dt 名字
+						dd= movie.title
+						dt 名字
+						dd= movie.title
+
+
+					

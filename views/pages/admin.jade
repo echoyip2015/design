@@ -1,0 +1,27 @@
+extend ../layout
+
+block content
+	.container
+		h2 #{title}
+		.row
+			form.form-horizontal(method="post",action="/admin/user/new")
+				.form-group
+					label.col-sm-2.control-label(for="inputTitle") 用户名
+					.col-sm-10
+						input#inputTitle.form-control(type="text",name="movie[title]",value="#{movie.title}")
+				.form-group
+					label.col-sm-2.control-label(for="inputTitle") 密码
+					.col-sm-10
+						input#inputTitle.form-control(type="text",name="movie[title]",value="#{movie.title}")
+				.form-group
+					label.col-sm-2.control-label(for="inputDoctor") 
+					.col-sm-10
+						input#inputTitle.form-control(type="text",name="movie[title]",value="#{movie.doctor}")
+				
+
+
+
+
+
+
+					
